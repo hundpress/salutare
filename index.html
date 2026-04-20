@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Clínica Salutare | Centro de Saúde da Família em Vila Verde</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="flex items-center gap-4">
+        <button class="md:hidden text-slate-900" id="menu-toggle">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+        <a href="#"><img src="images/logo.jpg" alt="Clínica Salutare" class="logo-img"></a>
+    </div>
+    <ul class="hidden md:flex items-center gap-8" id="nav-list">
+        <li><a href="#about" class="nav-link">Sobre Nós</a></li>
+        <li><a href="#services" class="nav-link">Especialidades</a></li>
+        <li><a href="#reviews" class="nav-link">Testemunhos</a></li>
+        <li><a href="#gallery-sec" class="nav-link">O Espaço</a></li>
+        <li><a href="#contacts" class="nav-link">Contactos</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/351253196387" target="_blank" class="cta-button" id="cta-nav">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> <span class="hidden xs:inline">Marcação</span><span class="xs:hidden">Chat</span>
+      </a>
+    </div>
+  </nav>
+
+  <div id="mobile-menu">
+    <button class="absolute top-8 right-8" id="menu-close"><i data-lucide="x" class="w-8 h-8"></i></button>
+    <a href="#about" class="mobile-link">Sobre Nós</a>
+    <a href="#services" class="mobile-link">Especialidades</a>
+    <a href="#reviews" class="mobile-link">Testemunhos</a>
+    <a href="#gallery-sec" class="mobile-link">O Espaço</a>
+    <a href="#contacts" class="mobile-link">Contactos</a>
+  </div>
+
+  <section id="hero">
+    <div class="max-w-5xl w-full flex flex-col items-center gap-6 md:gap-8 reveal">
+      <div class="px-4 py-1.5 border border-[#29a2f522] rounded-full text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-[#29a2f5] bg-[#29a2f508] backdrop-blur-sm" >Centro de Saúde da Família</div>
+      <h1 class="f-display text-slate-900">
+        Saúde humanizada para<br>
+        <span class="title-wrapper italic" id="title-rotator"></span>
+      </h1>
+      <p class="text-slate-500 text-base md:text-xl max-w-3xl text-center px-4">
+        O seu Hub Digital de Saúde em Vila Verde. Atendimento completo em Fisioterapia, Psicologia, Nutrição e Enfermagem, focado no seu acolhimento e bem-estar total.
+      </p>
+      <div class="mt-4">
+        <a href="#services" class="bg-[#29a2f5] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-sm md:text-base shadow-xl flex items-center gap-3 hover:bg-[#158b8d] transition-all">
+          Ver Especialidades <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-white">
+    <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="reveal order-2 md:order-1">
+        <img class="w-full aspect-[4/5] object-cover rounded-[24px] md:rounded-[32px] shadow-2xl" src="images/clinica.jpg">
+      </div>
+      <div class="flex flex-col items-center md:items-start text-center md:text-left reveal order-1 md:order-2">
+        <h2 class="overline-text md:!text-left w-full">Sobre a Clínica Salutare</h2>
+        <h3 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 md:mb-8 leading-tight">Excelência e humanização em Vila Verde.</h3>
+        <div class="text-slate-500 space-y-4 md:space-y-6 text-base md:text-lg">
+            <p>A Clínica Salutare nasceu para oferecer um acompanhamento de saúde completo e próximo. Com uma equipa dedicada, proporcionamos cuidados que vão além do tratamento.</p>
+            <p>A nossa abordagem 360º garante que cada paciente recebe atenção integrada em diversas especialidades, num ambiente moderno e confortável.</p>
+        </div>
+        <div class="mt-8 md:mt-10 flex gap-6 justify-center md:justify-start w-full">
+            <div class="flex flex-col">
+                <span class="text-2xl md:text-3xl font-bold text-[#29a2f5]">4.8/5</span>
+                <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-400">Google Reviews</span>
+            </div>
+            <div class="w-px h-10 md:h-12 bg-slate-100"></div>
+            <div class="flex flex-col">
+                <span class="text-2xl md:text-3xl font-bold text-[#29a2f5]">360º</span>
+                <span class="text-[10px] uppercase tracking-tighter font-bold text-slate-400">Acompanhamento</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-slate-50/50">
+    <div class="max-w-[1200px] w-full flex flex-col items-center">
+      <div class="mb-12 md:mb-20 reveal text-center">
+        <h2 class="overline-text">Especialidades</h2>
+        <h3 class="f-display text-slate-900 !text-3xl md:!text-6xl">Cuidado Multidisciplinar</h3>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div class="service-card reveal">
+          <img src="images/reabilitacao.avif" class="w-full h-48 object-cover">
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#29a2f5]">
+                <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-extrabold text-slate-900 text-lg mb-3">Reabilitação Física</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Fisioterapia avançada para recuperação de mobilidade, alívio de dor e reabilitação pós-cirúrgica.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+            <img src="images/saude_mental.avif" class="w-full h-48 object-cover">
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+              <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#29a2f5]">
+                  <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-extrabold text-slate-900 text-lg mb-3">Saúde Mental</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Acompanhamento psicológico humanizado focado no equilíbrio emocional em todas as idades.</p>
+            </div>
+        </div>
+        <div class="service-card reveal">
+            <img src="images/nutricional.jpg" class="w-full h-48 object-cover">
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+              <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#29a2f5]">
+                  <i data-lucide="apple" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-extrabold text-slate-900 text-lg mb-3">Bem-estar Nutricional</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Planos alimentares personalizados para perda de peso, nutrição desportiva e reeducação.</p>
+            </div>
+        </div>
+        <div class="service-card reveal">
+            <img src="images/enfermagem.avif" class="w-full h-48 object-cover">
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+              <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-[#29a2f5]">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <h4 class="font-extrabold text-slate-900 text-lg mb-3">Enfermagem</h4>
+              <p class="text-slate-500 text-sm leading-relaxed">Cuidados especializados, curativos, administração de fármacos e acompanhamento preventivo.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="bg-white !py-20 md:!py-24">
+    <div class="max-w-[1200px] w-full flex flex-col items-center">
+      <div class="mb-12 md:mb-16 reveal text-center">
+        <h2 class="overline-text">Testemunhos</h2>
+        <h3 class="f-display text-slate-900 !text-3xl md:!text-5xl">O que dizem os nossos pacientes</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full">
+        <div class="p-6 md:p-8 border border-slate-100 rounded-[24px] bg-slate-50/50 reveal hover:-translate-y-2 transition duration-300 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4 text-[#29a2f5]">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6 italic flex-grow text-sm md:text-base">"A equipa da Salutare foi incansável na minha recuperação pós-operatória. Senti-me segura durante todo o processo."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-[#29a2f5] font-bold">M</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-xs md:text-sm">Maria Fernandes</h4>
+              <span class="text-[10px] text-slate-400 uppercase font-bold">Fisioterapia</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 md:p-8 border border-slate-100 rounded-[24px] bg-slate-50/50 reveal hover:-translate-y-2 transition duration-300 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4 text-[#29a2f5]">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6 italic flex-grow text-sm md:text-base">"Um espaço muito acolhedor e com profissionais de excelência. Recomendo vivamente a nutrição."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-[#29a2f5] font-bold">J</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-xs md:text-sm">João Ribeiro</h4>
+              <span class="text-[10px] text-slate-400 uppercase font-bold">Nutrição</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 md:p-8 border border-slate-100 rounded-[24px] bg-slate-50/50 reveal hover:-translate-y-2 transition duration-300 shadow-sm flex flex-col">
+          <div class="flex gap-1 mb-4 text-[#29a2f5]">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6 italic flex-grow text-sm md:text-base">"A psicóloga é fantástica. Tem-me ajudado imenso a lidar com a ansiedade do dia-a-dia. Muito grata!"</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-[#29a2f5] font-bold">A</div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-xs md:text-sm">Ana Costa</h4>
+              <span class="text-[10px] text-slate-400 uppercase font-bold">Psicologia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery-sec" class="bg-slate-50/50 overflow-hidden !py-16 md:!py-24">
+    <div class="mb-12 reveal text-center">
+      <h2 class="overline-text">O Nosso Espaço</h2>
+      <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Ambiente Acolhedor em Vila Verde</h3>
+    </div>
+    <div class="w-full">
+        <div class="gallery-track">
+            <img src="images/alongue.jpg">
+            <img src="images/diet.jpg">
+            <img src="images/fisioterapia.jpg">
+            <img src="images/mulher.jpg">
+            <img src="images/sono.jpg">
+        </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="bg-[#0d2644] text-white !py-20 md:!py-32">
+    <div class="max-w-4xl w-full flex flex-col items-center reveal text-center">
+      <h2 class="f-display text-white mb-6 !text-3xl md:!text-7xl">Vamos conversar?</h2>
+      <p class="text-white/70 text-base md:text-lg mb-10 md:mb-12 max-w-2xl px-4">A sua saúde não pode esperar. Entre em contacto para marcações rápidas ou informações sobre acordos (ADSE, Multicare, etc.).</p>
+      
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mb-16 w-full px-4">
+          <a href="https://wa.me/351253196387" target="_blank" class="cta-button !bg-[#29a2f5] !h-14 !px-8 !text-base w-full sm:w-auto">WhatsApp Marcações</a>
+          <a href="tel:253196387" class="bg-white/10 px-8 h-14 flex items-center justify-center rounded-full border border-white/10 font-bold text-sm w-full sm:w-auto">📞 253 196 387</a>
+          <a href="mailto:clisalutare@gmail.com" class="bg-white/10 px-8 h-14 flex items-center justify-center rounded-full border border-white/10 font-bold text-sm w-full sm:w-auto">✉️ E-mail</a>
+      </div>
+      
+      <div class="bg-white/5 border border-white/10 rounded-[32px] md:rounded-[40px] p-8 md:p-12 backdrop-blur-md max-w-xl w-full mx-4">
+        <h3 class="text-lg md:text-xl font-bold mb-6 md:mb-8 flex justify-center gap-3 items-center">
+            <i data-lucide="clock" class="text-white"></i> <span>Horário de Atendimento</span>
+        </h3>
+        <div class="flex flex-col w-full text-sm">
+            <div class="flex justify-between py-4 border-b border-white/5">
+                <span class="text-white/60">Segunda a Sexta</span>
+                <span class="font-bold">09:00 - 19:30</span>
+            </div>
+            <div class="flex justify-between py-4 border-b border-white/5">
+                <span class="text-white/60">Sábado</span>
+                <span class="font-bold">09:00 - 13:00</span>
+            </div>
+            <div class="flex justify-between py-4">
+                <span class="text-white/60">Domingo</span>
+                <span class="font-bold">Encerrado</span>
+            </div>
+        </div>
+      </div>
+      <p class="mt-10 text-white/40 text-sm">📍 Rua do Bom Retiro, Vila Verde</p>
+    </div>
+  </section>
+
+  <footer class="bg-[#0d2644] text-white py-12 px-8 text-center border-t border-white/5">
+    <div class="flex justify-center gap-6 mb-8">
+        <a href="#" class="text-white/60 hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" class="text-white/60 hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+    </div>
+    <p class="text-slate-400 text-[10px] tracking-widest uppercase font-semibold">© 2026 Clínica Salutare. Vila Verde, Portugal.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
